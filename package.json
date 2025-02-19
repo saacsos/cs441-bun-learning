@@ -1,0 +1,12 @@
+{
+    "name": "bun-ts-playground",
+    "version": "1.0.0",
+    "description": "Learn JavaScript & TypeScript with Bun",
+    "scripts": {
+      "start": "bun run src/index.ts",
+      "dev": "bun run --watch src/index.ts"
+    },
+    "devDependencies": {
+      "typescript": "^5.4.0"
+    }
+  }

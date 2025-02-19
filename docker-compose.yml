@@ -1,0 +1,9 @@
+services:
+  bun-app:
+    build: .
+    volumes:
+      - .:/app
+    command: ["bun", "run", "src/index.ts"]
+    environment:
+      - NODE_ENV=development
+      - FILE=src/index.ts
