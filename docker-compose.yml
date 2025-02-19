@@ -7,3 +7,11 @@ services:
     environment:
       - NODE_ENV=development
       - FILE=src/index.ts
+    networks:
+      - innernetwork
+
+networks:
+  # กำหนด network ให้ bun-app ใช้ network เดียวกับของ Laravel
+  innernetwork:
+    name: laravel441_sail  # หาชื่อ network จาก docker network ls ใช้ตัวเดียวกับ Laravel
+    external: true         # บอกว่าจะไปเชื่อม network กับภายนอก (laravel441_sail อยู่นอก docker-compose นี้)
